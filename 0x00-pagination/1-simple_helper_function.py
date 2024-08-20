@@ -52,7 +52,7 @@ class Server:
         return {
             "page_size": page_size,
             "page": page,
-            "data": self.dataset()[start_index:end_index]
+            "data": self.dataset()[start_index:end_index],
         }
 
 
