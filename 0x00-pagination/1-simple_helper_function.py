@@ -41,11 +41,17 @@ class Server:
         """
         Return the appropriate page of the dataset.
         """
+        print(page, page_size)
         assert isinstance(page, int) and isinstance(
             page_size, int
         ), "raised when page and/or page_size are not ints"
-        assert page < 0 or page_size < 0, "raised with negative values"
-        assert page == 0 or page_size == 0, "raised with 0"
+        assert page != 0 and page_size != 0, "raised with 0"
+        assert page > 0 and page_size > 0, "raised with negative values"
 
         start_index, end_index = index_range(page, page_size)
         return self.dataset()[start_index:end_index]
+
+
+if __name__ == "__main__":
+    server = Server()
+    print(server.get_page(1, 3))
