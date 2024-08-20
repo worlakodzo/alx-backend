@@ -41,7 +41,7 @@ class Server:
         """
         Return the appropriate page of the dataset.
         """
-        print(page, page_size)
+        
         assert isinstance(page, int) and isinstance(
             page_size, int
         ), "raised when page and/or page_size are not ints"
