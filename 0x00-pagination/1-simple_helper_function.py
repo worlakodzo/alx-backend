@@ -38,6 +38,9 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Return the appropriate page of the dataset.
+        """
         assert isinstance(page, int) and isinstance(
             page_size, int
         ), "raised when page and/or page_size are not ints"
