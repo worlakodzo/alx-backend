@@ -49,11 +49,7 @@ class Server:
         assert page > 0 and page_size > 0, "raised with negative values"
 
         start_index, end_index = index_range(page, page_size)
-        return {
-            "page_size": page_size,
-            "page": page,
-            "data": self.dataset()[start_index:end_index],
-        }
+        return self.dataset()[start_index:end_index]
 
 
 if __name__ == "__main__":
