@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""
-This module provides a simple helper
-function to load index range of a page.
-"""
 
 import csv
 import math
 from typing import List
+
+"""
+This module provides a simple helper
+function to load index range of a page.
+"""
 
 
 def index_range(page, page_size):
@@ -57,4 +58,4 @@ class Server:
 
 if __name__ == "__main__":
     server = Server()
-    print(server.get_page(1, 3))
+    print(server.get_page(3000, 100))
